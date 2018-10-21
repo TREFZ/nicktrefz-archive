@@ -1,0 +1,20 @@
+/* Styles on this page overwrite those on default.css for the purposes of buy2.html's design */
+
+#buyForm{
+ display:block;
+ float:right;
+ border-right:none;
+ border-left:1px solid #CFCFCF;
+}
+
+#certPreviewBox{
+ float:none;
+ width:420px;
+ /*background:#ddffdd;*/
+ /*border-bottom:1px solid #CFCFCF;*/
+}
+
+form fieldset{
+ margin-right:0;
+ margin-left:20px;
+}

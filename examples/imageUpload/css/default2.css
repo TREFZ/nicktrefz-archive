@@ -1,0 +1,19 @@
+/* Styles on this page overwrite those on default.css for the purposes of buy2.html's design */
+
+#certPreviewBox p{
+ font-size:100%;
+}
+
+#certPreviewBox{
+ border:none;
+}
+
+#certPreviewBox div.buttons{
+ padding-left:62px;
+ margin-bottom:0;
+ width:300px;
+}
+
+form td{
+ padding:4px 0;
+}

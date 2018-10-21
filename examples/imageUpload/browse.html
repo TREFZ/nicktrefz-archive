@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="css/default.css" type="text/css" media="screen" /> 
+    <script type="text/javascript" src="js/uploader.js"></script> 
+</head>
+
+<body class="modal browse">
+    <div id="modalContent">
+
+        <h1>UPLOAD YOUR OWN IMAGE</h1>
+
+        <div class="leftSide">
+            <img src="i/uploadVisual.jpg" alt="Upload Your Own Image" />
+        </div>
+
+        <div class="rightSide">
+            <h2>It's quick and easy</h2>
+
+            <p>Personalize your gift cards by attaching your own photo.  All you have to do is upload a picture, and then paste it onto one of our backgrounds.</p>
+
+            <p>Let's get started!</p>
+    
+            <form name="filebrowser" action="#" method="post">
+                <div align="center" id="browsingBox">
+                    <p align="center">Locate the image on your computer</p>
+                    <input type="file" name="filename" />
+                </div>
+        
+                <div align="center" id="loadingBox" class="hide">
+                    LOADING <img src="i/loading.gif" alt="Loading" />
+                </div>
+        
+                <div class="buttons">
+                    <a class="noImage" href="javascript:uploadIt();">
+                        OK
+                    </a>
+                    <a class="noImage" href="javascript:void(0);" onclick="self.parent.tb_remove()">
+                        Cancel
+                    </a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>

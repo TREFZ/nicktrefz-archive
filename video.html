@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Nick Trefz :: Online Portfolio</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="stylesheet" href="css/colorbox/colorbox.css">
+
+    <script src="js/libs/modernizr-1.7.min.js"></script>
+</head>
+
+<body>
+    <!--#set var="node" value="video" -->
+
+    <div id="container">
+        <!--#include file="includes/header.html" -->
+        <!--#include file="includes/nav.html" -->
+
+        <div id="main">
+        
+            <!--<p><a class="youtube" href="http://www.youtube.com/embed/rG5WBrmxZII" title="">&nbsp;</a></p>-->
+
+
+            <h1>Video Production</h1>
+
+            <p>
+                At TopCoder I suggested, demonstrated, and executed various video projects to help demonstrate the company's technological nature.  Velcro elimination brackets became elaborate video displays, printed brochures became commercials, and a guy with a microphone and a sheet of paper became a prerecorded and produced audio and video demonstration.
+            </p>
+
+            <p>
+                You'll find several examples of my contributions below.
+            </p>
+
+            <div class="video">
+                <a class="youtube" href="http://www.youtube.com/embed/rG5WBrmxZII" title=""><img src="i/youtube-tco-intros.jpg" alt="Youtube" width="213" height="178" /></a>
+                <p class="caption">
+                    This video shows what we called "competitor introductions".  Whereas we used to just read their names over the loudspeaker, I turned the event into a show.  The display in the background is a reusable Flash app that I built from scratch that gathers data from XML feeds.  The audio is a mix of my own voice, soundbytes from the press, and some music samples.<br>Tools: Flash, Audacity
+                </p>
+            </div>
+            <div class="video">
+                <a class="youtube" href="http://www.youtube.com/embed/sMWsjre7Fck" title=""><img src="i/youtube-tc-brackets.jpg" alt="Youtube" width="213" height="178" /></a>
+                <p class="caption">
+                    This is an animation that I produced as part of a series of short video clips that we looped at our onsite events on giant projection displays.  A set of brackets has always been the recognizable symbol for TopCoder, so I combined that with the concept of evolution from my own slogan for TopCoder, "Competition Evolved"<br>Tools: Carrara 3D basic 2, Flash
+                </p>
+            </div>
+            <div class="video">
+                <a class="youtube" href="http://www.youtube.com/embed/sQzfR9fqLHY" title=""><img src="i/youtube-tc-world.jpg" alt="Youtube" width="213" height="178" /></a>
+                <p class="caption">
+                    Here is another example of a short video we looped at our onsite events.  This one was based on the phrase "TopCoder. All over the world." meant to convey our global presence, in a sci-fi theme.<br>Tools: Carrara 3D Basic 2, Flash
+                </p>
+            </div>
+            <div class="video">
+                <a class="youtube" href="http://www.youtube.com/embed/46-BRfLL-Jk" title=""><img src="i/youtube-tccc06.jpg" alt="Youtube" width="213" height="178" /></a>
+                <p class="caption">
+                    Here is another example of a short video we looped at our onsite events.  This one simply presents the event logo in a stylish manner.<br>Tools: Carrara 3D Basic 2
+                </p>
+            </div>
+            <div class="video">
+                <a class="youtube" href="http://www.youtube.com/embed/dMwTvN3R9cg" title=""><img src="i/youtube-tc-stage.jpg" alt="Youtube" width="213" height="178" /></a>
+                <p class="caption">
+                    We held our biannual events at various cities and facilities over the years, which meant we needed to constantly update our set design to work with each location.  I created 3D mockups like this to help the team picture the room layout.<br>Tools: Carrara 3D Basic 2.
+                </p>
+            </div>
+            <div class="video">
+                <a class="youtube" href="http://www.youtube.com/embed/olJNjj3oHNw" title=""><img src="i/youtube-tc-timelapse.jpg" alt="Youtube" width="213" height="178" /></a>
+                <p class="caption">
+                    This is a fun little movie that I created at our last event, the TCO08.  I propped up a webcam in the corner of the room and set it to snap a picture every N seconds over the six days that we were there.  I then spliced them together into a movie that shows the entire six days in just six minutes.<br>Tools: Yawcam, VirtualDub
+                </p>
+            </div>
+
+        </div>
+
+        <!--#include file="includes/footer.html" -->
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.5.1.min.js"%3E%3C/script%3E'))</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        $(document).ready(function(){
+			$(".youtube").colorbox({iframe:true, innerWidth:425, innerHeight:344});
+        });
+    </script>
+</body>
+</html>

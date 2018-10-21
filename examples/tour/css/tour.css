@@ -1,0 +1,82 @@
+html{ 
+margin:0px;
+padding:0px;
+}
+
+body{ 
+font-family: Arial, Verdana, Helvetica, sans-serif;
+line-height: normal;
+font-size: 12px;
+color: #333333;
+background: #ffffff;
+margin:0px;
+padding:0px;
+}
+
+p, h1, h2, h3 {
+margin: 10px 0px;
+}
+H1 { font-size: 200%; }
+H2 { font-size: 150%; }
+H3 { font-size: 125%; }
+
+A:link { color: #0000ff; text-decoration: none; }
+A:visited { color: #000066; text-decoration: none; }
+A:hover, A:active { color: #ff0000; }
+
+img{
+border: none;
+display: block;
+}
+
+#pageHeader{
+height: 40px;
+background: #ffffff;
+}
+
+a.marker{
+position: absolute;
+top: -12px;
+}
+
+.markerText{
+width: 80px; 
+position: absolute;
+text-align: center;
+color: #ed1f24;
+}
+
+#slide{
+height: 400px;
+background: transparent;
+}
+
+#slide img{
+border: 1px solid #eeeeee;
+}
+
+.copyright{
+font-size: 10px;
+background: transparent;
+}
+
+/* POPUP */
+div.popUp {
+display: none;
+position: absolute;
+top: 0px;
+left: 0px;
+z-index: 100;
+}
+
+div.popUp div {
+float: left;
+line-height: normal;
+font-weight: normal;
+font-size: 16px;
+background: #FFFFFF;
+border: 1px solid #999999;
+padding: 4px 6px 4px 6px;
+white-space: nowrap;
+}
+

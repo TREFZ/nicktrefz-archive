@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="css/default.css" type="text/css" media="screen" /> 
+    <!-- JQUERY -->
+    <script type="text/javascript" src="js/jquery-1.2.6.min.js"></script> 
+    <!-- JCAROUSEL -->
+    <script type="text/javascript" src="js/jcarousel/lib/jquery.jcarousel.pack.js"></script>
+    <link rel="stylesheet" type="text/css" href="js/jcarousel/lib/jquery.jcarousel.css" />
+    <link rel="stylesheet" type="text/css" href="js/jcarousel/skins/tango/skin.css" />
+    <script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery('#mycarousel').jcarousel({
+            // Configuration goes here
+        });
+    });
+    </script>
+    <!-- JCROP -->
+    <script type="text/javascript" src="js/Jcrop-0.9.5/jquery.Jcrop.pack.js"></script> 
+    <link rel="stylesheet" href="js/Jcrop-0.9.5/jquery.Jcrop.css" type="text/css" media="screen" />
+    <script language="Javascript" type="text/javascript">
+        var myW = 360;                              // width of cropping image (left side of the page)
+        var myH = 270;                              // height of cropping image
+
+		jQuery(window).load(function(){
+
+			jQuery('#cropImage').Jcrop({
+				onChange: showPreview,
+				onSelect: showPreview,
+                bgColor: 'black',
+                setSelect: [ 57, 60, 303, 190 ],    // this is x1,y1 and x2,y2 coordinates of the top left and bottom right corner of the cropping box on page open
+                aspectRatio: 246/130                // this is the aspect ratio that we confine the cropping box to; changes with square/wide selection
+			});
+
+		});
+
+		function showPreview(coords)
+		{
+			var rx = 246 / coords.w;                // this is the width of the live image on the cert preview; changes with square/wide selection
+			var ry = 130 / coords.h;                // this is the height of the live image on the cert preview; changes with square/wide selection
+
+			jQuery('#croppedPreview').css({
+				width: Math.round(rx * myW) + 'px',
+				height: Math.round(ry * myH) + 'px',
+				marginLeft: '-' + Math.round(rx * coords.x) + 'px',
+				marginTop: '-' + Math.round(ry * coords.y) + 'px'
+			});
+		}
+    </script>
+</head>
+
+<body class="modal crop">
+    <div id="modalContent">
+
+        <h1>UPLOAD YOUR OWN IMAGE</h1>
+
+        <div class="leftSide">
+            <h3>Please Frame Your Image</h3>
+            <img src="i/uploads/1_360.jpg" alt="" id="cropImage" />
+            <h3>Frame Shape</h3>
+            <ul id="aspectRatio">
+                <li><a class="square" href="">&nbsp;</a></li>
+                <li class="on"><a class="wide" href="">&nbsp;</a></li>
+            </ul>
+        </div>
+
+        <div class="rightSide">
+
+            <h3>Preview</h3>
+
+            <div id="previewBox">
+                <img src="i/bgs/custom1.jpg" alt="" class="bg" />
+                <div class="photoHolder">
+                    <img src="i/uploads/1_360.jpg" alt="" id="croppedPreview" />
+                </div>
+                <p id="cert-name">Grandma</p>
+                <p id="cert-comment">Happy Birthday!</p>
+            </div>
+    
+            <h3>Background</h3>
+
+            <div id="carouselContainer" align="center">
+                <ul id="mycarousel" class="jcarousel-skin-tango">
+                    <li><img src="i/bgs/custom1t.jpg" alt="" /></li>
+                    <li><img src="i/bgs/custom2t.jpg" alt="" /></li>
+                    <li><img src="i/bgs/custom3t.jpg" alt="" /></li>
+                </ul>
+            </div>
+    
+            <div class="buttons">
+                <a class="noImage" href="javascript:void(0);" onclick="self.parent.tb_remove()">Save</a>
+                <a class="noImage" href="javascript:void(0);" onclick="self.parent.tb_remove()">Cancel</a>
+                <a class="noImage" href="browse.html">Upload Another Image</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
